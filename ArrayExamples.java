@@ -39,10 +39,12 @@ public class ArrayExamples {
       if(num < lowest) { lowest = num; }
     }
     double sum = 0;
+    int count = 0;
     for(double num: arr) {
+      if(num == lowest) {count++;}
       if(num != lowest) { sum += num; }
     }
-    return sum / (arr.length - 1);
+    return sum / (arr.length - count);
   }
 
 
